@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation Rental Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="back">← See all properties</a>
+        <div class="nav-links">
+            <button>Share</button>
+            <button>Save</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="gallery">
+            <img src="/api/placeholder/800/600" alt="Main view" class="main-image">
+            <img src="/api/placeholder/400/300" alt="Property thumbnail" class="thumbnail">
+            <img src="/api/placeholder/400/300" alt="Property thumbnail" class="thumbnail">
+        </div>
+
+        <div class="tabs">
+            <div class="tab active">Overview</div>
+            <div class="tab">Amenities</div>
+            <div class="tab">Policies</div>
+        </div>
+
+        <div class="property-details">
+            <div class="details-left">
+                <h1>Juneau Vacation Home: Stunning View + Beach Access</h1>
+                <div class="rating">4.9 Exceptional</div>
+                
+                <div class="basic-info">
+                    <p>2 bedrooms • 1 bathroom • 1100 sq ft</p>
+                </div>
+
+                <h2>Popular amenities</h2>
+                <div class="amenities-grid">
+                    <div class="amenity">
+                        <span>🏊‍♂️</span>
+                        <span>Barbecue grill</span>
+                    </div>
+                    <div class="amenity">
+                        <span>🌳</span>
+                        <span>Outdoor Space</span>
+                    </div>
+                    <div class="amenity">
+                        <span>🏠</span>
+                        <span>Kitchen</span>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <img src="/api/placeholder/800/200" alt="Map" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                </div>
+            </div>
+
+            <div class="booking-card">
+                <h2>$134 per night</h2>
+                <div class="dates">
+                    <div class="check-in">
+                        <label>Check-in</label>
+                        <input type="date">
+                    </div>
+                    <div class="check-out">
+                        <label>Check-out</label>
+                        <input type="date">
+                    </div>
+                </div>
+                <div class="guests">
+                    <label>Guests</label>
+                    <select>
+                        <option>2 travelers</option>
+                    </select>
+                </div>
+                <button style="width: 100%; padding: 1rem; background: #007bff; color: white; border: none; border-radius: 8px; margin-top: 1rem;">
+                    Book now
+                </button>
+                <p style="text-align: center; margin-top: 0.5rem; color: #666;">You will not be charged yet</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
