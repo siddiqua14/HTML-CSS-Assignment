@@ -1,3 +1,16 @@
+:root {
+    --primary-color: #2196f3;
+    --success-color: #1a7f37;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #e5e5e5;
+    --background-white: #fff;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +21,11 @@
 body {
     line-height: 1.6;
     color: #333;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: var(--text-color);
+    
+    padding: var(--spacing-md);
+    background-color: var(--background-white);
 }
 
 .header {
@@ -133,7 +151,6 @@ body {
 .sub-header {
     background-color: #fff;
     padding: 1rem 0;
-    border-bottom: 1px solid #e5e5e5;
 }
 
 .header-container {
@@ -319,31 +336,47 @@ body {
     gap: 0.5rem;
 }
 
-.booking-card {
-    position: sticky;
-    top: 2rem;
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
 
-.map-container {
-    margin-top: 2rem;
-    height: 200px;
-    background: #f5f5f5;
-    border-radius: 8px;
-}
+
+
 
 .rating {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.25rem 0.5rem;
-    background: #007bff;
-    color: white;
-    border-radius: 4px;
+    gap: var(--spacing-sm);
+    /*margin-bottom: var(--spacing-lg);*/
 }
+.rating-badge {
+    background-color: var(--success-color);
+    color: white;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.rating-text {
+  
+    margin-bottom: var(--spacing-md);
+}
+.rating-text a{
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.property-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
 
 @media (max-width: 768px) {
     .gallery {
@@ -362,5 +395,240 @@ body {
     .booking-card {
         position: static;
         margin-top: 2rem;
+    }
+}
+
+.row {
+    display: flex; /* Use flexbox for the row layout */
+    align-items: center; /* Align items vertically centered */
+}
+
+.map-container {
+    flex: 1; /* Allow the map to take equal space */
+    max-width: 50%; /* Optional: limit the width */
+    padding: 2px; /* Optional: add padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.text-container {
+    flex: 1; /* Allow text to take equal space */
+    padding: 10px; /* Optional: add padding */
+}
+.booking-card {
+    position: sticky;
+    top: 2rem;
+    width: 100%;
+    max-width: 380px;
+    padding: 24px;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.member-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1b2b4d;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.loading-icon .spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #fff;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.sign-in-btn {
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.price-section {
+    margin-bottom: 16px;
+}
+
+.price-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.price-section span {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+}
+
+.cancellation-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.free-tag {
+    color: #2e8540;
+    font-weight: 500;
+}
+
+.info-icon {
+    color: #666;
+    font-size: 14px;
+}
+
+.cancel-notice {
+    color: #666;
+    font-size: 14px;
+}
+
+.availability-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #2e8540;
+    margin-bottom: 16px;
+}
+
+.check-icon {
+    color: #2e8540;
+}
+
+.booking{
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35); /* Adjust values as needed */
+    border-radius: 8px; /* Optional: for rounded corners */
+    padding: 20px; /* Optional: add padding for inner spacing */
+    background-color: #fff; /* Optional: background color for contrast */
+    margin: 20px 0; 
+}
+.booking-form .dates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.date-input {
+    width: 100%;
+}
+
+.date-input label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #666;
+}
+
+.input-wrapper {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+.calendar-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-wrapper input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 4px 8px;
+    font-size: 16px;
+}
+
+.travelers {
+    margin-bottom: 20px;
+}
+
+.total-section {
+    margin-bottom: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.total-amount {
+    font-weight: 600;
+}
+
+.total-note {
+    font-size: 14px;
+    color: #666;
+}
+
+.price-details {
+    color: #0073e6;
+    text-decoration: underline;
+    margin-left: 4px;
+}
+
+.book-now-btn {
+    width: 100%;
+    background: #0073e6;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.charge-notice {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.contact-host {
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.property-id {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .booking-card {
+        position: static;
+        max-width: 100%;
+        margin: 20px 0;
     }
 }

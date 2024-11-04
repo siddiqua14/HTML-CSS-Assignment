@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacation Rental Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <nav class="navbar">
         <div class="navbar-container">
@@ -15,14 +17,14 @@
                     <span>United States</span>
                 </div>
             </div>
-            
+
             <div class="navbar-right">
                 <!-- Checkbox hack for mobile menu -->
                 <input type="checkbox" id="nav-toggle" class="nav-toggle">
                 <label for="nav-toggle" class="nav-toggle-label">
                     <span class="hamburger"></span>
                 </label>
-                
+
                 <ul class="nav-links">
                     <li><a href="#" class="nav-link">Trip Boards</a></li>
                     <li><a href="#" class="nav-link">List your property</a></li>
@@ -33,12 +35,33 @@
             </div>
         </div>
     </nav>
-    
-    <header class="header">
-        <a href="#" class="back">← See all properties</a>
-        <div class="nav-links">
-            <button>Share</button>
-            <button>Save</button>
+
+    <header class="sub-header">
+        <div class="header-container">
+            <a href="#" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                See all properties
+            </a>
+
+            <div class="action-buttons">
+                <button class="btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+                        <polyline points="16 6 12 2 8 6" />
+                        <line x1="12" y1="2" x2="12" y2="15" />
+                    </svg>
+                    <span>Share</span>
+                </button>
+                <button class="btn-secondary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                    </svg>
+                    <span>Save</span>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -57,58 +80,169 @@
 
         <div class="property-details">
             <div class="details-left">
-                <h1>Juneau Vacation Home: Stunning View + Beach Access</h1>
-                <div class="rating">4.9 Exceptional</div>
-                
-                <div class="basic-info">
-                    <p>2 bedrooms • 1 bathroom • 1100 sq ft</p>
+                <a href="#" class="back-link">Entire home</a>
+
+                <h1 class="listing-title">Juneau Vacation Home: Stunning View + Beach Access</h1>
+                <div class="rating">
+                    <span class="rating-badge">9.8</span>
+                    <span>Exceptional</span>
                 </div>
+                <div class="rating-text">
+                    <a href="#reviews">See all 24 reviews > </a>
+                </div>
+
+
+                <div class="property-stats">
+                    <div class="stat-item">
+                        🛏️
+                        <span>2 bedrooms</span>
+                    </div>
+                    <div class="stat-item">
+                        🛁
+                        <span>1 bathroom</span>
+                    </div>
+                    <div class="stat-item">
+                        👥
+                        <span>Sleeps 4</span>
+                    </div>
+                    <div class="stat-item">
+                        🏠
+                        <span>1155 sq ft</span>
+                    </div>
+                </div>
+
+
+
 
                 <h2>Popular amenities</h2>
-                <div class="amenities-grid">
-                    <div class="amenity">
-                        <span>🏊‍♂️</span>
+                <div class="property-stats">
+                    <div class="stat-item">
+                        🍖
                         <span>Barbecue grill</span>
                     </div>
-                    <div class="amenity">
-                        <span>🌳</span>
-                        <span>Outdoor Space</span>
+
+
+                    <div class="stat-item">
+                        🧼
+                        <span>Washer</span>
                     </div>
-                    <div class="amenity">
-                        <span>🏠</span>
+                    <div class="stat-item">
+                        🍴
                         <span>Kitchen</span>
                     </div>
+                    <div class="stat-item">
+                        🚘
+                        <span>Parking available</span>
+                    </div>
+                    <div class="stat-item">
+                        🌳
+                        <span>Outdoor Space</span>
+                    </div>
+                    <div class="stat-item">
+                        🛜
+                        <span>WiFi</span>
+                    </div>
+
+
                 </div>
 
-                <div class="map-container">
-                    <img src="/api/placeholder/800/200" alt="Map" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                <div class="row">
+                    <div class="map-container">
+                        <img src="/img/map.webp" alt="Map"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                        <div class="text-container">
+                          <h4><b>John Doe</b></h4>
+                          <p>Architect & Engineer</p>
+                        </div>
+                      </div>
+                    <!--<div class="map-container">
+                        <img src="/img/map.webp" alt="Map"
+                            style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+                    </div> -->
+                    <div class="text-container">
+                        <h2>Your Heading Here</h2>
+                        <p>Your text content goes here. You can provide details or descriptions related to the map.</p>
+                    </div>
                 </div>
             </div>
 
             <div class="booking-card">
-                <h2>$134 per night</h2>
-                <div class="dates">
-                    <div class="check-in">
-                        <label>Check-in</label>
-                        <input type="date">
+                <div class="member-banner">
+                    <div class="loading-icon">
+                        <div class="spinner"></div>
                     </div>
-                    <div class="check-out">
-                        <label>Check-out</label>
-                        <input type="date">
+                    <p>Members get our best prices when signed in!</p>
+                    <button class="sign-in-btn">Sign in</button>
+                </div>
+                <div class="booking">
+    
+
+                    <div class="price-section">
+                        <h2>$134 <span>per night</span></h2>
                     </div>
+
+                    <div class="cancellation-info">
+                        <span class="free-tag">Free cancellation</span>
+                        <span class="info-icon">ⓘ</span>
+                        <p class="cancel-notice">Up to Mar. Nov 4</p>
+                    </div>
+
+                    <div class="availability-status">
+                        <span class="check-icon">✓</span>
+                        <span>Your dates are available</span>
+                    </div>
+
+                    <div class="booking-form">
+                        <div class="dates">
+                            <div class="date-input">
+                                <label>Start date</label>
+                                <div class="input-wrapper">
+                                    <i class="calendar-icon"></i>
+                                    <input type="text" value="Nov 18" readonly>
+                                </div>
+                            </div>
+                            <div class="date-input">
+                                <label>End date</label>
+                                <div class="input-wrapper">
+                                    <i class="calendar-icon"></i>
+                                    <input type="text" value="Nov 20" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="travelers">
+                            <div class="input-wrapper">
+                                <input type="text" value="2 travelers" readonly>
+                            </div>
+                        </div>
+
+                        <div class="total-section">
+                            <div class="total-row">
+                                <span>Total</span>
+                                <span class="total-amount">$543</span>
+                            </div>
+                            <div class="total-note">
+                                Total includes fees, not tax
+                                <a href="#" class="price-details">Price details</a>
+                            </div>
+                        </div>
+
+                        <button class="book-now-btn">Book now</button>
+                        <p class="charge-notice">You will not be charged yet</p>
+                    </div>
+
                 </div>
-                <div class="guests">
-                    <label>Guests</label>
-                    <select>
-                        <option>2 travelers</option>
-                    </select>
+
+                <div class="contact-section">
+                    <a href="#" class="contact-host">Contact host</a>
                 </div>
-                <button style="width: 100%; padding: 1rem; background: #007bff; color: white; border: none; border-radius: 8px; margin-top: 1rem;">
-                    Book now
-                </button>
-                <p style="text-align: center; margin-top: 0.5rem; color: #666;">You will not be charged yet</p>
+
+                <div class="property-id">
+                    Property # 0832810-fha
+                </div>
             </div>
         </div>
     </main>
 </body>
+
 </html>
