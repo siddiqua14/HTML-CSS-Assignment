@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <div class="country-selector">
+                    <img src="/api/placeholder/20/20" alt="Globe icon" class="globe-icon">
+                    <span>United States</span>
+                </div>
+            </div>
+            
+            <div class="navbar-right">
+                <!-- Checkbox hack for mobile menu -->
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span class="hamburger"></span>
+                </label>
+                
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link">Trip Boards</a></li>
+                    <li><a href="#" class="nav-link">List your property</a></li>
+                    <li><a href="#" class="nav-link">Help</a></li>
+                    <li><a href="#" class="nav-link">My trips</a></li>
+                    <li><a href="#" class="nav-link sign-in">Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <header class="header">
         <a href="#" class="back">← See all properties</a>
         <div class="nav-links">
@@ -17,9 +44,9 @@
 
     <main class="main-content">
         <div class="gallery">
-            <img src="/api/placeholder/800/600" alt="Main view" class="main-image">
-            <img src="/api/placeholder/400/300" alt="Property thumbnail" class="thumbnail">
-            <img src="/api/placeholder/400/300" alt="Property thumbnail" class="thumbnail">
+            <img src="/img/hotel1.png" alt="Main view" class="main-image">
+            <img src="/img/hotel2.png" alt="Property thumbnail" class="thumbnail">
+            <img src="/img/hotel3.png" alt="Property thumbnail" class="thumbnail">
         </div>
 
         <div class="tabs">

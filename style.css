@@ -18,11 +18,241 @@ body {
     align-items: center;
 }
 
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 0.75rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.country-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.country-selector:hover {
+    background-color: #f5f5f5;
+}
+
+.globe-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+/* Navigation Links */
 .nav-links {
     display: flex;
     gap: 1.5rem;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #f5f5f5;
+}
+
+.sign-in {
+    font-weight: 500;
+}
+
+/* Checkbox Hack for Mobile Menu */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    transition: background-color 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    transition: transform 0.3s;
+}
+
+.hamburger::before {
+    transform: translateY(-7px);
+}
+
+.hamburger::after {
+    transform: translateY(7px);
+}
+
+/* Sub Header Styles */
+.sub-header {
+    background-color: #fff;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.875rem;
+    transition: opacity 0.3s;
+}
+
+.back-link:hover {
+    opacity: 0.8;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #f5f5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        gap: 1rem;
+    }
+
+    /* Checkbox Hack for Mobile Menu Toggle */
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label .hamburger {
+        background-color: transparent;
+    }
+
+    .nav-toggle:checked + .nav-toggle-label .hamburger::before {
+        transform: rotate(45deg) translate(0, 0);
+    }
+
+    .nav-toggle:checked + .nav-toggle-label .hamburger::after {
+        transform: rotate(-45deg) translate(0, 0);
+    }
+
+    .nav-link {
+        padding: 0.75rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .country-selector span {
+        display: none;
+    }
+
+    .action-buttons {
+        gap: 0.5rem;
+    }
+
+    .btn-secondary {
+        padding: 0.5rem;
+    }
+
+    .btn-secondary span {
+        display: none;
+    }
+
+    .back-link span {
+        display: none;
+    }
+}
+
+/* Prevent scrolling when mobile menu is open */
+@media (max-width: 768px) {
+    .nav-toggle:checked ~ body {
+        overflow: hidden;
+    }
+}
 .main-content {
     max-width: 1200px;
     margin: 0 auto;
