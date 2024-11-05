@@ -390,7 +390,6 @@ body {
 .more-info-link {
     display: block;
     margin-top: 10px;
-    font-weight: bold;
     color: #0071c2; /* Link color */
     text-decoration: none;
 }
@@ -836,6 +835,7 @@ h2 {
     border-radius: 10px;
     position: relative;
     margin-bottom: 20px;
+    width: 80%;
 }
 
 .question-section h3 {
@@ -963,6 +963,8 @@ h2 {
     align-items: center;
     position: relative;
     padding: 10px 0;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .timeline-item {
@@ -1128,8 +1130,7 @@ details p {
 }
 
 .reviews-section {
-    flex: 1;
-    padding-left: 20px;
+    flex: 2;
 }
 
 .reviews-scroll {
@@ -1182,17 +1183,18 @@ details p {
 }
 
 
+
 .view-all {
     margin-top: 15px;
     padding: 10px;
-    background-color: #0073e6;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background-color: #f0f4f7;
+    color: #17578d;
+    border: 1px solid #17578d;
+    border-radius: 17px;
     cursor: pointer;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 @media (max-width: 600px) {
     .review-container {
         flex-direction: column;
