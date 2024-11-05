@@ -252,7 +252,16 @@ body {
     object-fit: cover;
     border-radius: 8px;
 }
-
+/* Media query for mobile resolution */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .thumbnail {
+        display: none; /* Hide thumbnail images on small screens */
+    }
+    
+    .gallery {
+        grid-template-columns: 1fr; /* Adjust the grid layout */
+    }
+}
 .tabs {
     display: flex;
     gap: 1rem;
@@ -397,7 +406,22 @@ body {
 .more-info-link:hover {
     text-decoration: underline;
 }
-
+/* Media query for small screens */
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    .row {
+        flex-direction: column; /* Change direction to column for small screens */
+    }
+    
+    .map-container {
+        max-width: 100%; /* Allow the map to take full width */
+        margin-bottom: 10px; /* Optional: add spacing below the map */
+    }
+    
+    .text-container {
+        max-width: 100%; 
+        
+    }
+}
 
 .booking-card {
     position: sticky;
