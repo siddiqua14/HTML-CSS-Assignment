@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vacation Rental Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -64,11 +66,11 @@
 
     <main class="main-content">
         <div class="gallery">
-            <img src="/img/hotel1.png" alt="Main view" class="main-image">
+            <img src="/img/hotel.jpg" alt="Main view" class="main-image">
+            <img src="/img/hotel1.png" alt="Property thumbnail" class="thumbnail">
             <img src="/img/hotel2.png" alt="Property thumbnail" class="thumbnail">
-            <img src="/img/hotel3.png" alt="Property thumbnail" class="thumbnail">
+            <div class="dots-indicator"></div> <!-- 3 dots indicator -->
         </div>
-
         <div class="tabs">
             <div class="tab active">Overview</div>
             <div class="tab">Amenities</div>
@@ -91,19 +93,19 @@
 
                 <div class="property-stats">
                     <div class="stat-item">
-                        🛏️
+                        <i class="fa fa-bed" aria-hidden="true"></i>
                         <span>2 bedrooms</span>
                     </div>
                     <div class="stat-item">
-                        🛁
+                        <i class="fa fa-bath" aria-hidden="true"></i>
                         <span>1 bathroom</span>
                     </div>
                     <div class="stat-item">
-                        👥
+                        <i class="fa fa-users" aria-hidden="true"></i>
                         <span>Sleeps 4</span>
                     </div>
                     <div class="stat-item">
-                        🏠
+                        <i class="fa fa-home" aria-hidden="true"></i>
                         <span>1155 sq ft</span>
                     </div>
                 </div>
@@ -111,28 +113,28 @@
                 <h2>Popular amenities</h2>
                 <div class="property-stats">
                     <div class="stat-item">
-                        🍖
+                        <i class="	fas fa-drumstick-bite"></i>
                         <span>Barbecue grill</span>
                     </div>
 
                     <div class="stat-item">
-                        🧼
+                        <i class="fa-solid fa-soap"></i>
                         <span>Washer</span>
                     </div>
                     <div class="stat-item">
-                        🍴
+                        <i class="fa fa-cutlery" aria-hidden="true"></i>
                         <span>Kitchen</span>
                     </div>
                     <div class="stat-item">
-                        🚘
+                        <i class="fa fa-car" aria-hidden="true"></i>
                         <span>Parking available</span>
                     </div>
                     <div class="stat-item">
-                        🌳
+                        <i class="fas fa-tree"></i>
                         <span>Outdoor Space</span>
                     </div>
                     <div class="stat-item">
-                        🛜
+                        <i class="fa fa-wifi" aria-hidden="true"></i>
                         <span>WiFi</span>
                     </div>
 
@@ -152,28 +154,28 @@
                     <div class="text-container">
                         <div class="info-list">
                             <div class="info-row">
-                                <span class="icon">📍</span>
+                                <i class="fa-solid fa-location-dot"></i>
                                 <div class="location-info">
                                     <span class="location">Auke Bay</span>
                                     <span class="drive-time">6 min drive</span>
                                 </div>
                             </div>
                             <div class="info-row">
-                                <span class="icon">📍</span>
+                                <i class="fa-solid fa-location-dot"></i>
                                 <div class="location-info">
                                     <span class="location">University of Alaska–Southeast</span>
                                     <span class="drive-time">10 min drive</span>
                                 </div>
                             </div>
                             <div class="info-row">
-                                <span class="icon">📍</span>
+                                <i class="fa-solid fa-location-dot"></i>
                                 <div class="location-info">
                                     <span class="location">Mendenhall Golf Course</span>
                                     <span class="drive-time">14 min drive</span>
                                 </div>
                             </div>
                             <div class="info-row">
-                                <span class="icon">✈️</span>
+                                <i class="fa-solid fa-plane"></i>
                                 <div class="location-info">
                                     <span class="location">Juneau, AK (JNU–Juneau Intl.)</span>
                                     <span class="drive-time">14 min drive</span>
@@ -276,17 +278,18 @@
             <p class="sleeps-info">2 bedrooms (sleeps 4)</p>
             <div class="bedrooms">
                 <div class="bedroom">
-                    <span class="bed-icon">🛏️</span>
+                    <i class="fa-solid fa-bed"></i>
                     <h3>Bedroom 1</h3>
                     <p>1 Queen Bed</p>
                 </div>
                 <div class="bedroom">
-                    <span class="bed-icon">🛏️</span>
+                    <i class="fa-solid fa-bed"></i>
                     <h3>Bedroom 2</h3>
                     <p>1 Twin Bed</p>
                 </div>
             </div>
             <section class="bathroom-section">
+                <i class="fa fa-bath" aria-hidden="true"></i>
                 <h2>1 bathroom</h2>
                 <p>Full Bathroom</p>
             </section>
@@ -298,19 +301,21 @@
             <h2>Spaces</h2>
             <div class="spaces-list">
                 <div class="space-item">
-                    <span class="space-icon">🏡</span>
+                    <i class="fa-solid fa-house"></i>
                     <p>Deck or patio</p>
                 </div>
                 <div class="space-item">
-                    <span class="space-icon">🍳</span>
+                    <i class="fa-solid fa-kitchen-set"></i>
+
                     <p>Kitchen</p>
                 </div>
                 <div class="space-item">
-                    <span class="space-icon">🏗️</span>
+                    <i class="fa-solid fa-house"></i>
                     <p>Balcony</p>
                 </div>
                 <div class="space-item">
-                    <span class="space-icon">🌳</span>
+                    <i class="fa fa-tree" aria-hidden="true"></i>
+
                     <p>Garden</p>
                 </div>
             </div>
@@ -379,11 +384,12 @@
             <h3>Amenities</h3>
             <div class="amenities-list">
                 <div class="amenity-item">🍽 Kitchen</div>
-                <div class="amenity-item">🚗 Parking available</div>
-                <div class="amenity-item">👕 Washer</div>
-                <div class="amenity-item">🌊 Ocean view</div>
+                <div class="amenity-item"><i class="fas fa-car"></i> Parking available</div>
+                <div class="amenity-item"><i class="fa-solid fa-soap"></i> Washer</div>
+                <div class="amenity-item"><i class="fa-solid fa-otter"></i>
+                    Ocean view</div>
                 <div class="amenity-item">🧺 Dryer</div>
-                <div class="amenity-item">🏡 Outdoor Space</div>
+                <div class="amenity-item"><i class="fas fa-tree"></i> Outdoor Space</div>
             </div>
             <a href="#" class="see-all">See all 34 amenities</a>
         </section>
@@ -394,7 +400,7 @@
             <p>Get instant answers with AI powered search of property information and reviews.</p>
             <div class="search-bar">
                 <input type="text" placeholder="Is there free parking?">
-                <button class="search-button">🔍</button>
+                <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
             </div>
             <button class="beta-tag">Beta</button>
         </section>
@@ -413,26 +419,27 @@
                     <div class="house-rules">
                         <p>Check in after 3:00 PM • Check out before 11:00 AM • Minimum age to rent: 25</p>
                         <div class="rules-icons">
+                            
                             <div class="rule-item">
-                                <span>👶</span>
+                                <i class="fa fa-child" aria-hidden="true"></i>
                                 <div>
                                     <strong>Children</strong><br>Children allowed: ages 0-17
                                 </div>
                             </div>
                             <div class="rule-item">
-                                <span>🐕</span>
+                                <i class="fa-solid fa-dog"></i>
                                 <div>
                                     <strong>Pets</strong><br>No pets allowed
                                 </div>
                             </div>
                             <div class="rule-item">
-                                <span>🚫</span>
+                                <i class="fa-solid fa-ban"></i>
                                 <div>
                                     <strong>Events</strong><br>No events allowed
                                 </div>
                             </div>
                             <div class="rule-item">
-                                <span>🚭</span>
+                                <i class="fa-solid fa-ban-smoking"></i>
                                 <div>
                                     <strong>Smoking</strong><br>Smoking is not permitted
                                 </div>
@@ -470,37 +477,44 @@
                 <div class="rules-content cancellation-content">
                     <div class="house-rules">
                         <div class="timeline">
-                            <div class="timeline-item today">
-                                <span class="dot"></span>
-                                <p>Today</p>
-                            </div>
-                            <div class="timeline-line thick-line">
-                                <p class="refund-text">Full refund</p>
-                            </div>
-                            <div class="timeline-item nov4">
-                                <span class="circle-dot"></span>
-                                <p>Nov 4</p>
-                            </div>
-                            <div class="timeline-line thin-line">
-                                <p class="refund-text">No refund</p>
-                            </div>
-                            <div class="timeline-item checkin">
-                                <span class="small-dot"></span>
-                                <p>Check-in</p>
-                            </div>
+                            <div class="timeline-line"></div>
+                            <div class="range-label full-refund">Full refund</div>
+                            <div class="range-label no-refund">No refund</div>
+                            <ul class="timeline-points">
+                                <li class="timeline-point point-current">
+                                    <div class="point-marker"></div>
+                                    <div class="point-date">Today</div>
+                                </li>
+                                <li class="timeline-point point-past">
+                                    <div class="point-marker"></div>
+                                    <div class="point-date">Nov 4</div>
+                                </li>
+                                <li class="timeline-point point-future">
+                                    <div class="point-marker"></div>
+                                    <div class="point-date">Check-in</div>
+                                </li>
+                            </ul>
                         </div>
                         <!-- Cancellation Policy Details -->
-                        <div class="policy">
-                            <div class="policy-section">
-                                <p><strong>Before Nov 4</strong></p>
-                                <h4>Full refund</h4>
-                                <p>Cancel your reservation before Nov 4 at 11:59 PM, and you'll get a full refund. Times
-                                    are based on the property's local time.</p>
+                        <div class="refund-container">
+                            <div class="refund-section">
+                                <div class="refund-date">
+                                    <p>Before<br>Nov 4</p>
+                                </div>
+                                <div class="refund-info">
+                                    <h4>Full refund</h4>
+                                    <p>Cancel your reservation before Nov 4 at 11:59 PM, and you'll get a full refund.
+                                        Times are based on the property’s local time.</p>
+                                </div>
                             </div>
-                            <div class="policy-section">
-                                <p><strong>After Nov 4</strong></p>
-                                <h4>No refund</h4>
-                                <p>After that, you won't get a refund.</p>
+                            <div class="refund-section">
+                                <div class="refund-date">
+                                    <p>After<br>Nov 4</p>
+                                </div>
+                                <div class="refund-info">
+                                    <h4>No refund</h4>
+                                    <p>After that, you won’t get a refund.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -536,34 +550,33 @@
                         <li class="faq-item">
                             <details>
                                 <summary>Is Juneau Vacation Home: Stunning View + Beach Access pet-friendly?</summary>
-                                <p>Yes, pets are allowed under certain conditions. Please check the policy for more
-                                    details.</p>
+
                             </details>
                         </li>
                         <li class="faq-item">
                             <details>
                                 <summary>What time is check-in at Juneau Vacation Home: Stunning View + Beach Access?
                                 </summary>
-                                <p>Check-in is at 3:00 PM local time.</p>
+
                             </details>
                         </li>
                         <li class="faq-item">
                             <details>
                                 <summary>What time is check-out at Juneau Vacation Home: Stunning View + Beach Access?
                                 </summary>
-                                <p>Check-out is at 11:00 AM local time.</p>
+
                             </details>
                         </li>
                         <li class="faq-item">
                             <details>
                                 <summary>Where is Juneau Vacation Home: Stunning View + Beach Access located?</summary>
-                                <p>It is located on the beachfront with a stunning view of the cove.</p>
+
                             </details>
                         </li>
                     </ul>
                 </div>
             </div>
-
+            <!--Rating and review -->
             <div class="rules-wrapper review-container">
                 <div class="rules-headings">
                     <div class="rating">
