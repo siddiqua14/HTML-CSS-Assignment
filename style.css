@@ -191,6 +191,7 @@ body {
         padding: 1rem;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         gap: 1rem;
+
     }
 
     /* Checkbox Hack for Mobile Menu Toggle */
@@ -218,6 +219,10 @@ body {
         padding: 0.75rem;
         width: 100%;
         text-align: center;
+    }
+    .header-container {
+
+        margin-bottom: 20px;
     }
 }
 
@@ -923,9 +928,7 @@ h2 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .bedrooms {
-        grid-template-columns: 1fr;
-    }
+  
 
     .spaces-list {
         grid-template-columns: 1fr 1fr;
