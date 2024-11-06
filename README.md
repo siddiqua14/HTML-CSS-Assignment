@@ -36,16 +36,16 @@ A modern, responsive website for showcasing and booking vacation rental properti
 - Q&A system
 
 ## Project Structure
- Project/
-├── index.html
-├── style.css
-├── img/
-│   ├── hotel.jpg
-│   ├── hotel1.png
-│   ├── hotel2.png
-│   ├── map.webp
-│   ├── loading.png
-│   └── logo.jpg
+ Project|--><br>
+      &ensp  ├── index.html<br>
+        ├── style.css<br>
+        ├── img/<br>
+        │   ├── hotel.jpg<br>
+        │   ├── hotel1.png<br>
+        │   ├── hotel2.png<br>
+        │   ├── map.webp<br>
+        │   ├── loading.png<br>
+        │   └── logo.jpg<br>
 
 
 ## Technologies Used
