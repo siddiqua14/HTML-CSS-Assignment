@@ -16,7 +16,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+span {
+    letter-spacing: 1px;
 }
 
 body {
@@ -243,6 +248,7 @@ body {
     margin: 0 auto;
     padding: 1rem;
 }
+
 .gallery {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -269,7 +275,8 @@ body {
 
 /* 3 Dots Indicator for Small Screens */
 .dots-indicator {
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -291,15 +298,18 @@ body {
 /* Media query for mobile resolution */
 @media (max-width: 768px) {
     .thumbnail {
-        display: none; /* Hide thumbnail images on small screens */
+        display: none;
+        /* Hide thumbnail images on small screens */
     }
 
     .gallery {
-        grid-template-columns: 1fr; /* Adjust the grid layout */
+        grid-template-columns: 1fr;
+        /* Adjust the grid layout */
     }
 
     .dots-indicator {
-        display: flex; /* Show dots on small screens */
+        display: flex;
+        /* Show dots on small screens */
     }
 }
 
@@ -489,7 +499,14 @@ body {
 
     .text-container {
         max-width: 100%;
+        padding: 10px 0 10px 0;
+    }
 
+    .info-list {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        color: #333;
+        max-width: 336px;
     }
 }
 
@@ -821,7 +838,6 @@ h2 {
 /* About Property Section */
 .about-property {
     max-width: 70%;
-
     background-color: #f8f8f8;
     padding: 1.5rem;
     border-radius: 8px;
@@ -836,16 +852,39 @@ h2 {
 
 .about-property p {
     color: #555;
-    line-height: 1.2;
+    line-height: 1.4;
+    /* Slightly increased for better readability */
+    font-size: 0.9rem;
+    /* Adjusted font size to be smaller */
     margin-bottom: 10px;
+}
+
+.about-property ul {
+    list-style-type: none;
+    /* Removes bullet points from li elements */
+    padding-left: 0;
+}
+
+.about-property li {
+    color: #555;
+    line-height: 1.4;
+    font-size: 0.9rem;
+    /* Matches paragraph font size */
+    margin-bottom: 8px;
 }
 
 /* Media Query for Responsive Design */
 @media (max-width: 768px) {
     .about-property {
-        max-width: 90%;
+        max-width: 100%;
         /* Take up more width on smaller screens */
         padding: 15px;
+    }
+
+    .about-property p,
+    .about-property li {
+        font-size: 0.8rem;
+        /* Further reduce font size for smaller screens */
     }
 }
 
@@ -978,6 +1017,7 @@ h2 {
     border-radius: 10px;
     cursor: pointer;
 }
+
 .beta-tag {
     background-color: #04090f;
     color: #fff;
@@ -1031,6 +1071,10 @@ h2 {
     font-size: 0.9em;
     color: #666;
     margin: 5px 0;
+    color: #555;
+    line-height: 1.4;
+    /* Slightly increased for better readability */
+
 }
 
 /* Icons Grid for House Rules */
@@ -1322,9 +1366,12 @@ h2 {
 
 .refund-info p {
     margin: 0;
-    font-size: 14px;
+
     color: #666;
     text-align: left;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1.4;
 }
 
 /* Responsive styling */
@@ -1351,6 +1398,9 @@ h2 {
 .important-info-list li {
     margin-bottom: 10px;
     color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    line-height: 1;
 }
 
 .important-info-list li b {
@@ -1374,10 +1424,7 @@ h2 {
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-    color: #333;
-    list-style: none;
     display: flex;
-    align-items: center;
 
 }
 
