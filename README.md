@@ -37,7 +37,7 @@ A modern, responsive website for showcasing and booking vacation rental properti
 
 ## Project Structure
  Project|--><br>
-      &ensp  ├── index.html<br>
+        ├── index.html<br>
         ├── style.css<br>
         ├── img/<br>
         │   ├── hotel.jpg<br>
