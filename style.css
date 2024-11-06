@@ -842,6 +842,7 @@ h2 {
     padding: 1.5rem;
     border-radius: 8px;
     text-align: justify;
+    overflow: hidden;
 }
 
 .about-property h2,
@@ -877,8 +878,10 @@ h2 {
 @media (max-width: 768px) {
     .about-property {
         max-width: 100%;
-        /* Take up more width on smaller screens */
+        /* Take up more width on smaller screens*/
+
         padding: 15px;
+
     }
 
     .about-property p,
@@ -886,6 +889,14 @@ h2 {
         font-size: 0.8rem;
         /* Further reduce font size for smaller screens */
     }
+
+    .property-manager {
+        --fade-start: 5%;
+        mask-image: linear-gradient(to bottom, rgb(255, 255, 255) var(--fade-start), transparent);
+    }
+
+
+
 }
 
 .property-title {
@@ -921,6 +932,11 @@ h2 {
 
     .property-title {
         font-size: 1.1rem;
+    }
+
+    .amenities-list {
+        --fade-start: 50%;
+        mask-image: linear-gradient(to bottom, rgb(255, 255, 255) var(--fade-start), transparent);
     }
 }
 
@@ -1031,7 +1047,16 @@ h2 {
 }
 
 /* House Rules Section */
+.house-rules {
+    position: relative;
+}
 
+.house-rules .see-more {
+    display: none;
+    /* Initially hide the 'See More' link */
+    color: #007bff;
+    text-decoration: none;
+}
 
 /* Container for Wrapping Each Section */
 .rules-container {
@@ -1084,6 +1109,10 @@ h2 {
     gap: 10px;
     margin-top: 10px;
     font-size: 0.9em;
+    transition: opacity 0.5s ease;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .rule-item {
@@ -1099,13 +1128,20 @@ h2 {
 }
 
 /* Responsive Design for Small Screens */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .rules-wrapper {
         flex-direction: column;
     }
 
     .rules-icons {
         grid-template-columns: 1fr;
+        --fade-start: 10%;
+        mask-image: linear-gradient(to bottom, rgb(255, 255, 255) var(--fade-start), transparent);
+    }
+
+    .house-rules .see-more {
+        display: block;
+        /* Show 'See More' link on small screens */
     }
 }
 
